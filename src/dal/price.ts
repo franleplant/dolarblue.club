@@ -1,6 +1,6 @@
 const url = "https://mercados.ambito.com//dolar/informal/variacion"
 
-interface IPrice {
+export interface IPrice {
   // "184,00"
   compra: string
   venta: string
