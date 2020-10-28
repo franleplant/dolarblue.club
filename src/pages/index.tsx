@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { PageProps, Link, graphql } from "gatsby"
 import Price from "../components/Price"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export interface IData {
   data: {
@@ -14,6 +15,7 @@ export interface IData {
 export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
+      <SEO />
       <div className="one-page wrapper price__wrapper">
         <Price />
       </div>
@@ -69,6 +71,36 @@ export default function Index(props: PageProps<IData>) {
             El otro instrumento de escape mas y mas están siendo las
             criptomonedas, también te recomiendo que aprendas sobre ellas.
           </p>
+
+          <div style={{ textAlign: "start" }}>
+            Informate:
+            <ul>
+              <li>
+                <a
+                  href="https://www.ambito.com/contenidos/dolar.html"
+                  target="__blank"
+                >
+                  Ambito Financiero
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.dolarhoy.com/cotizaciondolarblue"
+                  target="__blank"
+                >
+                  dolarhoy.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.cronista.com/MercadosOnline/moneda.html?id=ARSB"
+                  target="__blank"
+                >
+                  Cronista
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </Layout>
