@@ -1,4 +1,4 @@
-const url = "https://mercados.ambito.com//dolar/informal/variacion"
+import { useQuery, QueryResult } from "react-query"
 
 export interface IPrice {
   // "184,00"
@@ -12,8 +12,12 @@ export interface IPrice {
   "class-variacion": string
 }
 
-export async function getPrice(): Promise<IPrice> {
-  const res = await fetch(url)
-  const body = await res.json()
-  return body
+const url = "https://mercados.ambito.com//dolar/informal/variacion"
+
+export function useGetPrice(): QueryResult<IPrice> {
+  return useQuery<IPrice>("price:dolarblue", async () => {
+    const res = await fetch(url)
+    const body = await res.json()
+    return body
+  })
 }

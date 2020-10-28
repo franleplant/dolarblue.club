@@ -19,7 +19,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-query": "^2.25.2"
   },
   "devDependencies": {
     "husky": ">=4",
@@ -32,6 +33,7 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "typecheck": "tsc --noEmit",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
