@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { PageProps, Link, graphql } from "gatsby"
 import Price from "../components/Price"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 export interface IData {
