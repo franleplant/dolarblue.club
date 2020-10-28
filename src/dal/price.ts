@@ -1,4 +1,4 @@
-import { useQuery, QueryResult } from "react-query"
+import { useQuery, QueryResult, QueryConfig } from "react-query"
 
 export interface IPrice {
   // "184,00"
@@ -14,10 +14,14 @@ export interface IPrice {
 
 const url = "https://mercados.ambito.com//dolar/informal/variacion"
 
-export function useGetPrice(): QueryResult<IPrice> {
-  return useQuery<IPrice>("price:dolarblue", async () => {
-    const res = await fetch(url)
-    const body = await res.json()
-    return body
+export function useGetPrice(config?: QueryConfig<IPrice>): QueryResult<IPrice> {
+  return useQuery<IPrice>({
+    queryKey: "price:dolarblue",
+    queryFn: async () => {
+      const res = await fetch(url)
+      const body = await res.json()
+      return body
+    },
+    config,
   })
 }
