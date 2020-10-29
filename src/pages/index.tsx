@@ -3,6 +3,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Price from "../components/Price"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import PriceTable from "../components/PriceTable"
 
 export interface IData {
   data: {
@@ -16,8 +17,12 @@ export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
       <SEO />
-      <div className="one-page wrapper price__wrapper">
+      <div className="one-page wrapper price__wrapper flow">
         <Price />
+      </div>
+      <div className="one-page" id="todos-los-precios">
+        <h3>Todos las cotizaciones</h3>
+        <PriceTable />
       </div>
       <div className="wrapper text-center page__wrapper">
         <section>

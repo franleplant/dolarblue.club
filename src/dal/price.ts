@@ -8,6 +8,8 @@ export interface IPrice {
   fecha: string
   // "-2,56%"
   variacion: string
+  // this replaces compra y venta when there's no compra o vent
+  valor?: string
   //"down"
   "class-variacion": "up" | "down" | string
 }
