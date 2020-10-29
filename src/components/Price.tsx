@@ -3,25 +3,30 @@ import moment from "moment"
 import "moment/locale/es"
 import { useGetPrice, IPrice } from "../dal/price"
 import Loading from "./Loading"
+import { QueryResult } from "react-query"
 
 export default function PriceLayout(props: any) {
+  const queryResult = useGetPrice({
+    refetchInterval: 5 * 60 * 1000,
+    refetchIntervalInBackground: true,
+  })
   return (
-    <div className="[ card ] [ wrapper flow ]">
-      <Price />
+    <div
+      className={`[ card ] [ wrapper flow ] [ ${
+        queryResult.isLoading ? "card__box_animation" : ""
+      } ]`}
+    >
+      <Price {...queryResult} />
     </div>
   )
 }
 
+interface IProps extends QueryResult<IPrice> {}
 //TODO brecha!
 // TODO otros dolares
-export function Price(props: any) {
-  const { data: price, isLoading, error } = useGetPrice({
-    refetchInterval: 5 * 60 * 1000,
-    refetchIntervalInBackground: true,
-  })
-
+export function Price({ data: price, isLoading, error }: IProps) {
   if (isLoading && !price) {
-    return <Loading />
+    return <Loading style={{ fontSize: "3rem" }} />
   }
 
   if (error) {
