@@ -34,8 +34,8 @@ export default function Loading(props: IProps) {
     }
   }, [])
   return (
-    <div className="text-center" style={props.style}>
-      <div>{TIME[index]}</div>
-    </div>
+    <span className="text-center" style={props.style}>
+      {TIME[index]}
+    </span>
   )
 }
