@@ -37,6 +37,7 @@
   }
 }
 
+
 .card {
   box-shadow: 0px 0px 5px #757373;
   /*border: 1px solid #ccc;*/
@@ -98,6 +99,7 @@
   /*: #00a6edff;*/
   color: var(--white);
   position: absolute;
+  padding: 1rem;
   left: 0;
   right: 0;
 }
@@ -105,6 +107,16 @@
 .header h1 {
   margin: 0;
 }
+
+@media (max-height: 375px) {
+  .header {
+    padding: 0rem;
+  }
+  .header h1 {
+    font-size: 1rem;
+  }
+}
+
 
 .card__box_animation {
   animation-duration: 1s;
