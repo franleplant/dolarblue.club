@@ -20,8 +20,8 @@ export default function Index(props: PageProps<IData>) {
       <div className="one-page wrapper price__wrapper flow">
         <Price />
       </div>
-      <div className="one-page" id="todos-los-precios">
-        <h3>Todos las cotizaciones</h3>
+      <div className="one-page wrapper__desktop" id="todos-los-precios">
+        <h3 className="text-center">Todos las cotizaciones</h3>
         <PriceTable />
       </div>
       <div className="wrapper text-center page__wrapper">
