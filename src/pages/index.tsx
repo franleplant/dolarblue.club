@@ -39,11 +39,11 @@ export default function Index(props: PageProps<IData>) {
           <p>
             El estado considera que el MUL (el mercado único libre) de cambio es
             justamente "libre" y "único", cosa que es difícil de entender como
-            cierta que ya que por su puesto no es único porque existen una
-            variedad de mercados cambiarios entre el ilegal y el MEP (dólar
-            bolas) o CCL (dólar contado con liqui) pero tampoco es "libre" ya
-            que el estado argentino ha puesto mas y mas trabas para acceder al
-            "dólar oficial".
+            cierta ya que no es único porque existen una variedad de mercados
+            cambiarios entre el ilegal y el MEP (dólar bolsa) o CCL (dólar
+            contado con liqui) pero tampoco es "libre" ya que el estado
+            argentino ha puesto mas y mas trabas para acceder al "dólar
+            oficial".
           </p>
 
           <p>
