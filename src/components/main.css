@@ -51,8 +51,8 @@
 }
 
 .price__details {
-      font-size: 1rem;
-          margin-top: 0.8rem;
+  font-size: 1rem;
+  margin-top: 0.8rem;
 }
 
 .text-center {
@@ -87,16 +87,15 @@
   background-color: var(--carolina-blue);
   /*--warm-black: #004346ff;*/
   /*: #00a6edff;*/
-  color:  var(--white);
+  color: var(--white);
   position: absolute;
-      left: 0;
-          right: 0;
+  left: 0;
+  right: 0;
 }
 
 .header h1 {
   margin: 0;
 }
-
 
 /*.price__left {*/
 
