@@ -9,7 +9,7 @@ export interface IPrice {
   // "-2,56%"
   variacion: string
   //"down"
-  "class-variacion": string
+  "class-variacion": "up" | "down" | string
 }
 
 const url = "https://mercados.ambito.com//dolar/informal/variacion"

@@ -19,11 +19,13 @@
 }
 
 .one-page {
+  /*height: calc(100vh - 71px);*/
   height: 100vh;
 }
 
 .wrapper {
-  padding: 40px;
+  padding: 1rem;
+  overflow: hidden;
 }
 
 .card {
@@ -31,8 +33,7 @@
   /*border: 1px solid #ccc;*/
   border-radius: 5px;
   min-height: 10rem;
-  max-width: 70%;
-  min-width: 40rem;
+  min-width: 60%;
 }
 
 .card__footer {
@@ -41,12 +42,17 @@
 
 .price__hero {
   text-align: center;
-  font-size: 9rem;
+  font-size: 500%;
   line-height: initial;
 }
 
 .price__mini > h6 {
   margin-bottom: 0.3rem;
+}
+
+.price__details {
+      font-size: 1rem;
+          margin-top: 0.8rem;
 }
 
 .text-center {
@@ -74,6 +80,23 @@
 .page__wrapper > * {
   max-width: 800px;
 }
+
+.header {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--carolina-blue);
+  /*--warm-black: #004346ff;*/
+  /*: #00a6edff;*/
+  color:  var(--white);
+  position: absolute;
+      left: 0;
+          right: 0;
+}
+
+.header h1 {
+  margin: 0;
+}
+
 
 /*.price__left {*/
 

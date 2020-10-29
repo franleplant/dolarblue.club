@@ -19,7 +19,7 @@ export default function Index(props: PageProps<IData>) {
       <div className="one-page wrapper price__wrapper">
         <Price />
       </div>
-      <div className="one-page wrapper text-center page__wrapper">
+      <div className="wrapper text-center page__wrapper">
         <section>
           <h4>Que es el dolar blue?</h4>
           <p>

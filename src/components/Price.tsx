@@ -33,10 +33,22 @@ export function Price(props: any) {
   moment.locale("es")
   const date = moment(price.fecha, "DD/MM/YYYY - HH:mm")
 
+  let trendIndicator = ""
+  switch (price["class-variacion"]) {
+    case "up": {
+      trendIndicator = "👍"
+      break
+    }
+    case "down": {
+      trendIndicator = "👎"
+      break
+    }
+  }
+
   return (
     <>
       <div>
-        <h3 className="text-center">Dolar Blue</h3>
+        <h3 className="text-center">Dolar Blue {trendIndicator}</h3>
         <div className="price__hero">{sellPrice}</div>
         <div className="[ price__details ] [ flex-box-row ]">
           <div className="[ price__mini ] [ text-center ]">
